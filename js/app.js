@@ -67,6 +67,7 @@ const noOffer = document
 // total
 const bestPrice = document.getElementById('best-price');
 const totalPrice = document.getElementById('total-price');
+const fotter = document.getElementById('Fotter-total');
 
 function upDateTotal() {
   const besTotal = Number(bestPrice.innerText);
@@ -75,12 +76,12 @@ function upDateTotal() {
   const deliveryCost = Number(deliveryCharge.innerText);
   const fullTotalPrice = besTotal + memoryCharge + storagesPrice + deliveryCost;
   totalPrice.innerText = fullTotalPrice;
+  fotter.innerText = fullTotalPrice;
 }
 
 // end-total
 
 // promo-code
-const fotter = document.getElementById('Fotter-total');
 
 const apply = document
   .getElementById('promo-btn')
@@ -94,5 +95,5 @@ const apply = document
     } else {
       alert('Invalid Promo code');
     }
-    put.value = '';
+    input.value = '';
   });
